@@ -111,8 +111,31 @@
     margin-right: 8px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;   
+    position: relative;
 }
+.search-button .tooltip,.voice .tooltip,.notifications .tooltip
+{
+    position:absolute ;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 8px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.search-button:hover .tooltip,
+.voice:hover .tooltip ,
+.notifications:hover .tooltip
+{
+    opacity: 1;
 
+}
 .right-section
 {
   padding-left: 30px;   
@@ -129,7 +152,6 @@
     border: none;
     margin-right: 20px;
 }
-
 .bell
 {
     height: 30px;
@@ -139,6 +161,11 @@
 {
     border-radius: 50%;
     border: none;
+    background-color: white;
+}
+.voice:hover,.belll:hover,.search-button:hover
+{
+    background-color: rgb(228,228,228);
 }
 .k-img
 {
@@ -160,4 +187,24 @@
   align-items: center;
   justify-content: center;
   margin-left: 20px;
+}
+@media (max-width: 1100px) {
+    .header {
+        right: 0;
+    }    
+
+    .right-section {
+        display: none;
+    }
+    .middle-section
+    {
+        width: 400px;
+    }
+}
+@media (max-width: 600px)
+{
+    .middle-section
+    {
+        width:150px ;
+    }
 }
